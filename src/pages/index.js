@@ -1,21 +1,27 @@
 import * as React from "react"
 import NavModule, { Navbar } from "../components/NavModule/Navbar"
 import Hero from "../components/Hero"
+import ScrollVelocity from "../components/ScrollAnimations/ScrollVelocity"
+import Seo from '../components/seo'
 
 
 const IndexPage = () => {
   return (
     <main>
       <Navbar/>
-     {/* <div> <Footer/></div> */}
-     <div className="relative z-0"> {/* Add relative positioning and z-0 */}
-        <Hero /> {/* Render your styled component here */}
-      </div>
+      <Hero /> 
+      {/* <div classname="mt-10">
+      <ScrollVelocity/>
+      </div> */}
      
+    
+    
+   
     </main>
   )
 }
 
-export default IndexPage
+export const Head = () => <Seo title="Home Page" />
 
-export const Head = () => <title>Home Page</title>
+
+export default IndexPage

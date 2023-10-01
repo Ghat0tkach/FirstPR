@@ -1,5 +1,6 @@
-import * as React from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "gatsby"; // Import Link from Gatsby
 
 const variants = {
   open: {
@@ -27,9 +28,11 @@ export const MenuItem = ({ i }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      
-        {menuItems[i]}
-     
+      {i === 1 ? (
+        <Link to="/blog">Blog</Link> // Use Link to navigate to the "Blog" page
+      ) : (
+        menuItems[i]
+      )}
     </motion.li>
   );
 };
