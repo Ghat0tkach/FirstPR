@@ -6,7 +6,8 @@ module.exports = {
     title: `FirstPR`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap",{
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
@@ -31,5 +32,17 @@ module.exports = {
       name: `blog`,
       path: `${__dirname}/blog`,
     }
-  },]
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `readmes`,
+      path: `${__dirname}/readme/`,
+    },
+  }
+
+ 
+ 
+]
+
 };

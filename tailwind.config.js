@@ -4,10 +4,6 @@ module.exports = {
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
-  theme: {
-    fontFamily: {
-    'customfont':   ["JetBrains Mono", ]
-    }
-    },
+  theme: {},
   plugins: [],
 }

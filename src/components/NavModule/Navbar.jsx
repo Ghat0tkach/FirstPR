@@ -36,7 +36,7 @@ export const Navbar = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      className="fixed w-full z-50"
+      className="fixed z-50"
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />

@@ -3,21 +3,32 @@ import NavModule, { Navbar } from "../components/NavModule/Navbar"
 import Hero from "../components/Hero"
 import ScrollVelocity from "../components/ScrollAnimations/ScrollVelocity"
 import Seo from '../components/seo'
+import FeatureSection from "../components/features"
+import StarButton from "../components/Threejs/StarButton"
+import ButtonLayout from "../components/Threejs/buttonlayout"
 
 
 const IndexPage = () => {
   return (
-    <main>
-      <Navbar/>
+    <>
+    
+     <main>
+    
       <Hero /> 
-      {/* <div classname="mt-10">
+      <div classname="mt-10 mb-10">
+      <ButtonLayout/>
       <ScrollVelocity/>
-      </div> */}
+      </div>
+    
+    
+      
+     
      
     
     
    
-    </main>
+    </main></>
+   
   )
 }
 

@@ -2,7 +2,6 @@ import React from "react"
 import * as THREE from "three"
 import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Environment, useGLTF } from "@react-three/drei"
 import { EffectComposer, N8AO, SSAO } from "@react-three/postprocessing"
 import { BallCollider, Physics, RigidBody, CylinderCollider } from "@react-three/rapier"
 
@@ -10,10 +9,10 @@ THREE.ColorManagement.legacyMode = false
 const baubleMaterial = new THREE.MeshLambertMaterial({ color: "#c0a0a0", emissive: "red" })
 const capMaterial = new THREE.MeshStandardMaterial({ metalness: 0.75, roughness: 0.15, color: "#8a492f", emissive: "#600000", envMapIntensity: 20 })
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28)
-const baubles = [...Array(10)].map(() => ({ scale: [0.75, 0.75, 1, 1, 1.25][Math.floor(Math.random() * 5)] }))
+const baubles = [...Array(30)].map(() => ({ scale: [0.75, 0.75, 1, 1, 1.25][Math.floor(Math.random() * 5)] }))
 
 function Bauble({ vec = new THREE.Vector3(), scale, r = THREE.MathUtils.randFloatSpread }) {
-  // const { nodes } = useGLTF("/cap.glb")
+
   const api = useRef()
   useFrame((state, delta) => {
     delta = Math.min(0.1, delta)
@@ -29,7 +28,7 @@ function Bauble({ vec = new THREE.Vector3(), scale, r = THREE.MathUtils.randFloa
       <BallCollider args={[scale]} />
       <CylinderCollider rotation={[Math.PI / 2, 0, 0]} position={[0, 0, 1.2 * scale]} args={[0.15 * scale, 0.275 * scale]} />
       <mesh castShadow receiveShadow scale={scale} geometry={sphereGeometry} material={baubleMaterial} />
-      {/* <mesh castShadow scale={2.5 * scale} position={[0, 0, -1.8 * scale]} geometry={nodes.Mesh_1.geometry} material={capMaterial} /> */}
+      <mesh castShadow scale={2.5 * scale} position={[0, 0, -1.8 * scale]}  material={capMaterial} />
     </RigidBody>
   )
 }
@@ -47,7 +46,7 @@ function Pointer({ vec = new THREE.Vector3() }) {
   )
 }
 
-export const ThreeBackground = () => (
+export const Threebackground = () => (
   <Canvas
     shadows
     gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
@@ -61,9 +60,9 @@ export const ThreeBackground = () => (
       <Pointer />
       {baubles.map((props, i) => <Bauble key={i} {...props} />) /* prettier-ignore */}
     </Physics>
-    {/* <Environment files="/adamsbridge.hdr" /> */}
+   
     <EffectComposer disableNormalPass multisampling={0}>
-      <N8AO color="pink" aoRadius={2} intensity={1} />
+      <N8AO color="red" aoRadius={2} intensity={1} />
       <SSAO />
     </EffectComposer>
   </Canvas>

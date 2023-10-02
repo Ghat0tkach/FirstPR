@@ -3,7 +3,53 @@
 @tailwind utilities;
 
 
-  
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #000000 0%, #000000 80%);
+}
+
+body {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y:scroll;
+  font-family: "Inter var", sans-serif;
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMwLjUgMTZDMzAuNSAyNC4wMDgxIDI0LjAwODEgMzAuNSAxNiAzMC41QzcuOTkxODcgMzAuNSAxLjUgMjQuMDA4MSAxLjUgMTZDMS41IDcuOTkxODcgNy45OTE4NyAxLjUgMTYgMS41QzI0LjAwODEgMS41IDMwLjUgNy45OTE4NyAzMC41IDE2WiIgc3Ryb2tlPSJibGFjayIvPgo8cGF0aCBkPSJNNiA5QzcuNjU2ODUgOSA5IDcuNjU2ODUgOSA2QzkgNC4zNDMxNSA3LjY1Njg1IDMgNiAzQzQuMzQzMTUgMyAzIDQuMzQzMTUgMyA2QzMgNy42NTY4NSA0LjM0MzE1IDkgNiA5WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="),
+    white;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  padding-right: 10px;
+  cursor: pointer;
+  pointer-events: all;
+  color: rgb(255, 255, 255);
+  text-decoration: none; /* no underline */
+}
+
+@media screen and (max-width: 568px) {
+  .full {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .glowing-border {
     position: relative;
     overflow: hidden;
@@ -28,4 +74,50 @@
       left: 100%;
     }
   }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
   
+  .rainbow {
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    padding:0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      padding:0.7rem;
+      z-index: -2;
+      left: -50%;
+      top: -50%;
+      width: 200%;
+      height: 200%;
+      background-repeat: no-repeat;
+      background-size: 50% 50%, 50% 50%;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+      background-image: linear-gradient(#787e7a, #060606);
+      animation: rotate 4s linear infinite;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 6px;
+      top: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      background: white;
+      border-radius: 5px;
+    }
+  }

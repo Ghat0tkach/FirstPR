@@ -19,7 +19,7 @@ const variants = {
   },
 };
 
-const menuItems = ["Home", "Blog", "Profiles", "GitHub"];
+const menuItems = ["Profiles", "GitHub"];
 
 export const MenuItem = ({ i }) => {
   return (
@@ -27,7 +27,12 @@ export const MenuItem = ({ i }) => {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-    >
+    > 
+    {i === 0 ? (
+        <Link to="/">Home</Link> // Use Link to navigate to the "Blog" page
+      ) : (
+        menuItems[i]
+      )}
       {i === 1 ? (
         <Link to="/blog">Blog</Link> // Use Link to navigate to the "Blog" page
       ) : (

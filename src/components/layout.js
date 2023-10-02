@@ -9,7 +9,7 @@ import {
   siteTitle,
 } from './layout.module.css'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -21,12 +21,17 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
-    <div className={container}>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
-        {children}
-      </main>
-    </div>
+  <div>
+    {/* Your layout content here */}
+    {children}
+
+    {/* Include TransitionPortal for transitions */}
+    <TransitionPortal level="top">
+      {/* Transitions will appear here */}
+    </TransitionPortal>
+  </div>
+
+
   )
 }
 
