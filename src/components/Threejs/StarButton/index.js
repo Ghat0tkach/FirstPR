@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./starbutton.styles.css";
 import { Suspense, useState } from "react";
 import { motion, Variants, Transition } from "framer-motion";
 import { StarIcon } from "./StarIcon";
@@ -8,17 +8,39 @@ import { StarIcon } from "./StarIcon";
 export default function StarButton() {
   const [isHover, setIsHover] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const externalUrl = "https://github.com/Ghat0tkach/FirstPR";
+  const [animationComplete, setAnimationComplete] = useState(false);
 
+  const handleButtonClick = () => {
+    // Add your external URL here
+    
+
+    setIsLiked(!isLiked);
+  };
+
+  // Function to handle animation completion
+  const handleAnimationComplete = () => {
+    if (isLiked && !animationComplete) {
+      // Redirect to external URL after animation (only once)
+      setTimeout(() => {
+        // Open the URL in a new tab
+        window.open(externalUrl, "_blank");
+      }, 5000); // 5000 milliseconds = 5 seconds
+    
+      setAnimationComplete(true);
+    }
+  };
   return (
     <motion.button
+      className="Starbutton"
       initial={false}
       animate={[isLiked ? "liked" : "unliked", isHover ? "hover" : "rest"]}
       whileTap="press"
       variants={buttonVariants}
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
-      onClick={() => setIsLiked(!isLiked)}
-      className="div-2"
+      onClick={handleButtonClick}
+      onAnimationComplete={handleAnimationComplete} 
     >
       <motion.div
         className="icon"

@@ -18,7 +18,6 @@ export function Underlay() {
         <div style={{ width: "100%", padding: 0, display: "inline-flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
           <p
             style={{
-              fontFamily: "'Antonio', sans-serif",
               flex: "1 1 0%",
               height: 30,
               fontSize: 30,
@@ -60,7 +59,6 @@ export function Underlay() {
         <div
           className="full"
           style={{
-            fontFamily: "'Antonio', sans-serif",
             width: "100%",
             flex: "1 1 0%",
             padding: 0,
@@ -69,8 +67,8 @@ export function Underlay() {
             alignItems: "flex-end",
             justifyContent: "center",
           }}>
-          <p style={{ flex: "1 1 0%", fontSize: 150, lineHeight: "1em", color: "white", margin: 0, letterSpacing: -10 }}>HackToberfest</p>
-          {/* <p style={{ flex: "1 1 0%", fontSize: 150, lineHeight: "100%", textAlign: "right", color: "white", margin: 0, letterSpacing: -10 }}>ToberFest</p> */}
+          <p style={{ flex: "1 1 0%", fontSize: 100, lineHeight: "1em", color: "white", margin: 0, letterSpacing: -10 }}>HackToberfest</p>
+          <p style={{ flex: "1 1 0%", fontSize: 100, lineHeight: "100%", textAlign: "right", color: "white", margin: 0, letterSpacing: -10 }}>X FirstPR</p>
         </div>
         <div style={{ height:280 }} />
         <div
@@ -93,7 +91,6 @@ export function Underlay() {
           <p
             className="full"
             style={{
-              fontFamily: "'Antonio', sans-serif",
               flex: "1 1 0%",
               fontSize: 16,
               fontWeight: "700",
@@ -103,7 +100,7 @@ export function Underlay() {
               letterSpacing: -0.5,
               whiteSpace: "nowrap",
             }}>
-            THE SUMMIT OF THE MANY
+           FIRST PR
           </p>
           <div style={{ width: 10 }} />
           <p className="full" style={{ flex: "1 1 0%", fontSize: 12, lineHeight: "1em", textAlign: "right", color: "white" }}></p>

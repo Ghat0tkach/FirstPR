@@ -19,7 +19,7 @@ const variants = {
   },
 };
 
-const menuItems = ["Profiles", "GitHub"];
+const menuItems = ["","","Profiles", "GitHub"];
 
 export const MenuItem = ({ i }) => {
   return (

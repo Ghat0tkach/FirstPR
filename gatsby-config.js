@@ -12,7 +12,7 @@ module.exports = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-transformer-remark", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  }, {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -36,11 +36,14 @@ module.exports = {
   {
     resolve: `gatsby-source-filesystem`,
     options: {
-      name: `readmes`,
-      path: `${__dirname}/readme/`,
+      name: `readme`,
+      path: `${__dirname}/readme`,
     },
-  }
-
+  } , 
+  `gatsby-plugin-mdx`, 
+  `gatsby-transformer-remark`, 
+  `gatsby-plugin-sharp`, 
+  `gatsby-transformer-sharp`,
  
  
 ]

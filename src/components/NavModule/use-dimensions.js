@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import "./navbar.styles.css"
 // Naive implementation - in reality would want to attach
 // a window or resize listener. Also use state/layoutEffect instead of ref/effect
 // if this is important to know on initial client render.
