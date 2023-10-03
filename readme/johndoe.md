@@ -1,3 +1,9 @@
+---
+title: "Another Post"
+date: "2021-07-24"
+slug: "another-post"
+---
+
 # Hello, I'm John Doe
 
 Welcome to my profile! I'm a passionate developer who loves open source projects.

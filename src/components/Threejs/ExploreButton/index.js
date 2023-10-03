@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./explore.styles.css";
 import { Suspense, useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { Shapes } from "./shapes";

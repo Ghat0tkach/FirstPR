@@ -62,11 +62,11 @@ function ParallaxText({ children, baseVelocity = 100 }) {
   );
 }
 
-export default function ScrollVelocity() {
+export default function ScrollVelocity({text1,text2}) {
   return (
     <section className="mt-16">
-      <ParallaxText baseVelocity={-5}>HacktoberFest 2023 </ParallaxText>
-      <ParallaxText baseVelocity={5}>FIRST CONTRIBUTION </ParallaxText>
+      <ParallaxText baseVelocity={-5}>{text1} </ParallaxText>
+      <ParallaxText baseVelocity={5}>{text2}</ParallaxText>
     </section>
   );
 }
