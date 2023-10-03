@@ -5,7 +5,7 @@ import { useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 export function StarIcon({ isLiked, isHover }) {
-  const { nodes } = useGLTF("/star-icon.glb");
+  const { nodes } = useGLTF("./star.glb");
 
   return (
     <Canvas
