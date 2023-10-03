@@ -4,36 +4,108 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+ This project is made on Gatsby !
 </h1>
 
-## 🚀 Quick start
+<h1 align="center">
+  FIRST PR - Newcomer Friendly Open Source Project
+</h1>
 
-1.  **Create a Gatsby site.**
+## Welcome to FIRST PR!
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+FIRST PR is a beginner-friendly open-source project that aims to introduce newcomers to the world of open source development. You can contribute to this project by adding your own README.md file, which will be displayed on our website.
 
+### Getting Started
+
+# How to Contribute
+
+## Prerequisites
+
+Make sure you have the following prerequisites installed on your operating system before you start contributing:
+
+- [Nodejs and npm](https://nodejs.org/en/)
+
+  To verify run:
+
+  ```
+  node -v
+  ```
+
+  ```
+  npm -v
+  ```
+
+- [Gatsby.js](https://www.gatsbyjs.com/)
+
+  To verify run:
+
+  ```
+  gatsby --version
+  ```
+
+
+1. **Fork this Repository.**
+
+   Click the "Fork" button at the top right of this repository to create your copy.
+
+2. **Clone your Fork.**
+
+   ```shell
+   git clone https://github.com/your-username/FIRST-PR.git
+   cd FIRSTPR
+
+3. **Create a New Branch.**
+
+    Create a new branch to work on your contribution.
+    
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    git checkout -b my-contribution
     ```
 
-2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+ Install the dependencies for running the site.
 
-3.  **Open the code and start customizing!**
+        ```
+        npm install
+        ```
+Now run the site at your local server
+          ```
+          
+          
+          gatsby develop
+          ```
 
-    Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
+4. **Add your README.md./ Blog**
+
+   Inside the readme directory, create a new .md file with your GitHub username (e.g., your-username.md) 
+   For Blog , in the blog directory create a new folder with your article title and then index.mdx file inside your folder
+
+5. **Commit and Push.**
+   
+     
+   
+         git add .
+         git commit -m "Add my README.md"
+         git push origin my-contribution
+ 
+
+Commit your changes and push them to your forked repository.
+
+6. **Create a Pull Request.**
+
+   Go to your forked repository on GitHub, and you should see a "New Pull Request" button. Click on it and submit your pull request.
+
+   Wait for Approval.
+
+7 **Our maintainers will review your pull request. Once it's approved and merged, your README.md will be displayed on our website.**
+
+
+
+
+8.  **Learn more about Gatsby**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
     - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
