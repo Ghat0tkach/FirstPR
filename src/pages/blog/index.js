@@ -99,10 +99,6 @@ export const query = graphql`
           title
           slug
           author
-          coverimage{
-            childImageSharp {
-              gatsbyImageData(width: 800)
-            }
           }
           
         }
