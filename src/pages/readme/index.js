@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import ReadmeHeader from '../../components/blog/readmeHeader'
 import ScrollVelocity from "../../components/ScrollAnimations/ScrollVelocity";
+import Seo from "../../components/seo";
 
 const ReadmeIndex = ({ data }) => {
   // Extract subdirectories within the "readme" folder
@@ -17,7 +18,8 @@ const ReadmeIndex = ({ data }) => {
   return (
     <>
       <ReadmeHeader />
-      <div className="flex justify-center items-center mt-24">
+      <div className="bg-white h-1 mt-16"></div>
+      <div className="flex justify-center items-center mt-24 ">
       <div className="flex flex-wrap gap-4">
         {subdirectories.map(subdirectory => (
           <div
@@ -31,11 +33,16 @@ const ReadmeIndex = ({ data }) => {
                   {subdirectory}
                   </h5>
                 </a>
-                  <Link
-                   to={`/readme/${subdirectory}`}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  View on Github.
+                <Link
+                        to={
+                            subdirectory.endsWith(".md")
+                            ? `https://github.com/${subdirectory.replace(".md", "")}/${subdirectory.replace(".md", "")}`
+                            : `/readme/${subdirectory}`
+                        }
+                        className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                        {subdirectory.endsWith(".md") ? "View on Github" : "Readme"}
+                
                   <svg
                     className="w-3.5 h-3.5 ml-2"
                     aria-hidden="true"
@@ -63,6 +70,7 @@ const ReadmeIndex = ({ data }) => {
         ))}
       </div>
     </div>
+    <div className="mb-24 h-2" />
      <ScrollVelocity text1={`Github Readme//`} text2={`// Show Your Profiles `}/>
     </>
   );
@@ -78,5 +86,5 @@ export const pageQuery = graphql`
     }
   }
 `
-
+export const Head = () => <Seo title="Readme Section" />
 export default ReadmeIndex

@@ -19,7 +19,7 @@ const variants = {
   },
 };
 
-const menuItems = ["","","Profiles", "GitHub"];
+const menuItems = ["","","", ""];
 
 export const MenuItem = ({ i }) => {
   return (
@@ -34,7 +34,17 @@ export const MenuItem = ({ i }) => {
         menuItems[i]
       )}
       {i === 1 ? (
-        <Link to="/blog">Blog</Link> // Use Link to navigate to the "Blog" page
+        <Link to="/blog">Blog Section</Link> // Use Link to navigate to the "Blog" page
+      ) : (
+        menuItems[i]
+      )}
+      {i === 2 ? (
+        <Link to="/readme">Explore Github Readme</Link> // Use Link to navigate to the "Blog" page
+      ) : (
+        menuItems[i]
+      )}
+        {i === 3 ? (
+        <a href="https://www.github.com/ghat0tkach/firstPR">Github Repo ⭐</a> // Use Link to navigate to the "Blog" page
       ) : (
         menuItems[i]
       )}
