@@ -101,7 +101,7 @@ export const query = graphql`
           author
           }
           
-        }
+        
         id
       }
     }
