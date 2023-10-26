@@ -1,6 +1,6 @@
 import React from 'react'
 import Background from '../components/HomeScreenBackground/Background'
-
+import Link from 'next/link'
 
 function LandingPage() {
   return (
