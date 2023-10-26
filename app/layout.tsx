@@ -11,11 +11,9 @@ export default function RootLayout({
     <html>
       <head />
       <body>
-        <div className="mx-auto  max-w-2xl px-6">
-         
-          {children}
-         
-        </div>
+                  
+        {children}
+
       </body>
     </html>
   );
