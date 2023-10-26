@@ -1,6 +1,6 @@
-import getPostMetadata from "../components/utils/getPostMetadata";
-import PostPreview from "../components/utils/PostPreview";
-import Header from "../components/header/header"
+import getPostMetadata from "../../components/utils/getPostMetadata";
+import PostPreview from "../../components/utils/PostPreview";
+import Header from "../../components/header/header"
 const HomePage = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (

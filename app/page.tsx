@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from '../../components/HomeScreenBackground/Background'
+import Background from '../components/HomeScreenBackground/Background'
 
 
 function LandingPage() {
