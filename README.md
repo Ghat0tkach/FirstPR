@@ -6,7 +6,7 @@
 
 FIRST PR is a beginner-friendly open-source project that aims to introduce newcomers to the world of open source development. You can contribute to this project by adding your own README.md file, which will be displayed on our website.
 
-### Getting Started
+
 
 # How to Contribute
 
