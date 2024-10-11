@@ -1,5 +1,4 @@
 import fs from "fs";
-import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/utils/getPostMetadata";
 import ReactMarkdown from "react-markdown"; // Add this line
