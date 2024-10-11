@@ -2,7 +2,9 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/utils/getPostMetadata";
-
+import ReactMarkdown from "react-markdown"; // Add this line
+import remarkGfm from "remark-gfm"; // Add this line
+import rehypeRaw from "rehype-raw"; // Add this line
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;
@@ -28,8 +30,8 @@ const PostPage = (props: any) => {
         <p className="text-slate-400 mt-2">{post.data.date}</p>
       </div>
 
-      <article className="prose">
-        <Markdown>{post.content}</Markdown>
+      <article className="bg-slate-800 text-white rounded-md p-10 gap-2 flex flex-col space-y-4">
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown> {/* Update this line */}
       </article>
     </div>
   );
